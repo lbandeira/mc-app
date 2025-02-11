@@ -4,11 +4,11 @@ import mouraColors from '@/assets/colors';
 import CardButton from '@/components/CardButton';
 
 
-export default function ConnectedToMouraConnect(){ 
+export default function ConnectedToMouraTracao(){ 
   return (
     <View>
       {/* <Text>Tela para quando o dispositivo estiver conectado</Text> */}
-      <CardButton title=' Find Moura Connect Tracao' route='/FindMouraConnectTracao' img={require('@/assets/images/icon.png')}/>
+      <CardButton title=' Find Moura Connect Tracao' route='/Moura_Tracao/FindMouraTracao' img={require('@/assets/images/icon.png')}/>
     </View>
   );
 }

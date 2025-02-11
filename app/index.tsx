@@ -5,7 +5,12 @@ import mouraColors from '@/assets/colors';
 const logo = '../assets/images/logo_moura_connect_login_removebg.png';
 import CardButton from '@/components/CardButton';
 import React from 'react';
-const imgBg = '../assets/images/background_white_blueshape3.png';
+
+const imgBg = '@/assets/images/background_white_blueshape3.png';
+const logo_auto = '@/assets/images/logo_auto.png';
+const logo_connect = '@/assets/images/logo_connect.png';
+const moura_tracao_path = '/Moura_Tracao/FindMouraTracao';
+const moura_auto_path = '/Moura_Auto/FindMouraAuto';
 
 export default function Index() {
     return (
@@ -13,9 +18,11 @@ export default function Index() {
         <View>
           <Image style={styles.image} source={require(logo)} />
         </View>
-        <Text style={styles.title}>Selecione o dispositivo para conexão</Text>
-        <CardButton title='Moura Connect Tracao' route='/ConnectedToMouraConnect' img={require('@/assets/images/logo_connect.png')} />
-        <CardButton title='Moura Auto' route='/ConnectedToMouraConnect' img={require('@/assets/images/icon.png')} />
+        <Text style={styles.title}>Seleção de dispositivos</Text>
+        <View style={styles.buttonContainer}>
+          <CardButton title='Moura Tração' route={moura_tracao_path} img={require(logo_connect)} />
+          <CardButton title='Moura Auto' route={moura_auto_path} img={require(logo_auto)} />
+        </View>
       </ImageBackground>
     );
 }
@@ -34,10 +41,17 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: mouraColors.black,
+    color: mouraColors.lightGray,
     fontFamily: 'OpenSans-SemiBold',
     alignSelf: 'center',
     margin: 15,
   },
+  buttonContainer: {
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    width: '100%',
+    padding: 20,
+  },
+
 });
 

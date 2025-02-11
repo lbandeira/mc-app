@@ -2,11 +2,10 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import mouraColors from '@/assets/colors';
 
-
-export default function FindMouraConnectTracao(){ 
+export default function ConnectedToMouraAuto(){ 
   return (
     <View>
-      <Text>Tela com a lista de dispositivos disponiveis</Text>
+      <Text>Tela para quando o dispositivo estiver conectado</Text>
     </View>
   );
 }

@@ -29,23 +29,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: mouraColors.transparentBlue,
         borderRadius: 8,
-        padding: 5,
-        margin: 10,
+        padding: 8,
+        width: '100%',
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 8,
         elevation: 5,
         alignItems: 'center', // Align items in the center
+        justifyContent: 'space-between', // Add space between items
     },
     title: {
-        fontSize: 22,
+        fontSize: 20,
         fontWeight: 'bold',
         fontFamily: 'OpenSans-Regular',
-        marginBottom: 10,
-        marginLeft: 8,
+        margin: 10,
         color: mouraColors.darkGray,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     content: {
         fontSize: 14,
@@ -54,14 +54,11 @@ const styles = StyleSheet.create({
     image:{
         width: 70,
         height: 70,
-        margin: 2
+        margin: 5
     },
     icon: {
-        alignSelf: 'center',
         color: mouraColors.darkGray,
-        marginBottom: 10,
-        marginLeft: 8,
-        margin: 8,
+        margin: 10,
     }
 });
 
