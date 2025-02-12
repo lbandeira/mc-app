@@ -4,28 +4,34 @@ import mouraColors from '@/assets/colors';
 import FindDeviceHeader from '@/components/FindDeviceHeader';
 import Button from '@/components/Button';
 import EmptyScanList from '@/components/EmptyScanList';
-const auto = '@/assets/images/logo_auto.png'
 
-export default function FindMouraAuto(){ 
+const auto = require('@/assets/images/logo_auto.png');
+
+export default function FindMouraAuto() {
   return (
     <View style={styles.container}>
-      <FlatList
-      data={[]}
-      renderItem={null}
-      ListHeaderComponent={<FindDeviceHeader loading={false} Icon={require(auto)} type={'Moura Auto'} />}
-      />
-      <EmptyScanList></EmptyScanList>
-      <View style={styles.buttonArea}>
+      <View style={styles.headerContainer}>
+            <FindDeviceHeader loading={false} Icon={auto} type={'Moura Auto'} />
+          </View>
+      {/* <FlatList
+        data={[{ key: 'header' }]} // Adiciona um item fictício para evitar lista vazia
+        renderItem={() => null} // Mantém sem itens visíveis
+        ListHeaderComponent={
+          
+        }
+      /> */}
+      <EmptyScanList />
+      {/* <View style={styles.buttonArea}> */}
         <Button
-        title="Buscar Dispositivos"
-        style={styles.button}
-        onPress={() => {
-          /**
-           * Só disparar scan caso não esteja carregando
-           */
-        }}
+          title="Buscar Dispositivos"
+          style={styles.button}
+          onPress={() => {
+            /**
+             * Só disparar scan caso não esteja carregando
+             */
+          }}
         />
-      </View>
+      {/* </View> */}
     </View>
   );
 }
@@ -34,24 +40,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    resizeMode: 'center',
     backgroundColor: mouraColors.white,
   },
-  title: {
-    fontSize: 20,
-    color: mouraColors.black,
-    fontFamily: 'OpenSans-SemiBold',
-    alignSelf: 'center',
-    margin: 15,
+  headerContainer: {
+    width: '100%',
   },
   buttonArea: {
     margin: 5,
   },
-  button:{
-    width: '100%',
+  button: {
+    width: '90%',
+    height: '8%',
     backgroundColor: mouraColors.darkYellow,
     color: mouraColors.white,
-    marginBottom: 30,
+    marginBottom: 20,
     margin: 5,
   },
 });
+

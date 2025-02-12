@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: mouraColors.lightGray,
         borderWidth: 1,
-        margin: 5,
+        margin: 10,
         alignItems: 'center',
         justifyContent: 'center',
     },

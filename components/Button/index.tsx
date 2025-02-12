@@ -1,3 +1,4 @@
+import mouraColors from '@/assets/colors';
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, ViewStyle } from 'react-native';
 
@@ -17,15 +18,15 @@ const Button: React.FC<ButtonProps> = ({ title, onPress, style }) => {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#007BFF',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        backgroundColor: mouraColors.darkBlue,
+        padding: 10,
         borderRadius: 5,
         alignItems: 'center',
     },
     buttonText: {
-        color: '#FFFFFF',
-        fontSize: 16,
+        color: mouraColors.white,
+        fontSize: 25,
+        fontFamily: 'OpenSans-Regular'
     },
 });
 
