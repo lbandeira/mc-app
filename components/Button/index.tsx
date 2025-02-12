@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
+        margin: 5,
     },
     buttonText: {
         color: mouraColors.white,

@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 8,
         elevation: 5,
-        alignItems: 'center', // Align items in the center
-        justifyContent: 'space-between', // Add space between items
+        alignItems: 'center', 
+        justifyContent: 'space-between', 
     },
     title: {
         fontSize: 20,
